@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#A5D8FF"
+    android:gravity="center_horizontal">
+
+    <!-- Circular background for the ghost image -->
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:background="#FFEFB4"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <!-- Ghost Image -->
+        <ImageView
+            android:id="@+id/ghostImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/asset_1"
+            android:contentDescription="Ghost image" />
+    </LinearLayout>
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Kiwi Bot 1.0"
+        android:textColor="#6B95CC"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Description Text -->
+    <TextView
+        android:id="@+id/appDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="Searching for tasty, high-protein dishes that you can make with the things you already own? You’re in the right place!"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-light" />
+
+    <!-- Get Started Button -->
+    <Button
+        android:id="@+id/getStartedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Get Started"
+        android:backgroundTint="#FFB6E5"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium" />
+</LinearLayout>

@@ -7,6 +7,8 @@ CORS(app)
 
 # OpenAI API key
 OPENAI_API_KEY = 'OPENAI_API_KEY'
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
 
 @app.route('/generate-recipe', methods=['POST'])
 def generate_recipe():

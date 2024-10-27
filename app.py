@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 # OpenAI API key
-OPENAI_API_KEY = 'sk-BT2XkfpX3TAixRq4kgo-XY1gI5LkjkGV2g1IfJMt7wT3BlbkFJ0lQmg0SQ5n61w85WuJ8Xlo5V8l7RpVtZISbYYslckA'
+OPENAI_API_KEY = 'OPENAI_API_KEY'
 
 @app.route('/generate-recipe', methods=['POST'])
 def generate_recipe():

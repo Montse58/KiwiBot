@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 # OpenAI API key
-OPENAI_API_KEY = 'your-openai-api-key'
+OPENAI_API_KEY = 'sk-BT2XkfpX3TAixRq4kgo-XY1gI5LkjkGV2g1IfJMt7wT3BlbkFJ0lQmg0SQ5n61w85WuJ8Xlo5V8l7RpVtZISbYYslckA'
 
 @app.route('/generate-recipe', methods=['POST'])
 def generate_recipe():
@@ -36,6 +36,10 @@ def generate_recipe():
     generated_recipe = response_json['choices'][0]['text']
 
     return jsonify({"recipe": generated_recipe})
+    
+@app.route('/test', methods=['GET'])
+def test_connection():
+    return jsonify({"message": "Backend is connected!"})
 
 if __name__ == '__main__':
     app.run(debug=True)

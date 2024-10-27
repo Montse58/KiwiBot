@@ -1,28 +1,39 @@
 package com.example.kiwibotapp
 
 import android.os.Bundle
-import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.kiwibotapp.databinding.ActivityWelcomePageBinding  // Import the correct binding class
 
-class WelcomePage : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_welcome_page)
+class WelcomePage : Fragment() {
 
-        // Ensure the 'main' view exists before using it
-        val mainView = findViewById<View>(R.id.main)
-        if (mainView != null) {
-            ViewCompat.setOnApplyWindowInsetsListener(mainView) { v, insets ->
-                val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-                insets
-            }
-        } else {
-            // Log an error if the view with id 'main' is not found
-            Log.e("WelcomePage", "'main' view not found in activity_welcome_page.xml")
+    private var _binding: ActivityWelcomePageBinding? = null  // Use the correct binding class here
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout using the binding
+        _binding = ActivityWelcomePageBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Set up navigation for the "Get Started" button
+        binding.getStartedButton.setOnClickListener {
+            // Trigger the navigation action defined in nav_graph.xml
+            findNavController().navigate(R.id.action_WelcomePage_to_MainPage)
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null  // Clear the binding when the view is destroyed
     }
 }

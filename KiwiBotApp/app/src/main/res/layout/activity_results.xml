@@ -1,9 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Results">
+    android:orientation="vertical"
+    android:background="#A5D8FF"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Title Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Kiwi's Suggestions..."
+        android:textColor="#6B95CC"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Suggestions Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="381dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Sample Suggestions Text -->
+        <TextView
+            android:id="@+id/suggestionsText"
+            android:layout_width="match_parent"
+            android:layout_height="331dp"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="4dp"
+            android:text="1. Overnight Oats with Berries and Nuts\n\nIngredients:\n• ½ cup rolled oats\n\nInstructions:\na. In a jar or container, mix oats, almond milk, Greek yogurt, chia seeds, and honey.\nb. Stir well, cover, and refrigerate overnight.\nc. In the morning, top with berries and nuts.\n\n2. Stuffed Bell Peppers with Turkey and Brown Rice\n\nIngredients:\n• 4 large bell peppers (any color)\n• 1 lb ground turkey\n• 1 cup cooked brown rice\n• 1 can diced tomatoes (15 oz), drained\n• 1 tsp Italian seasoning\n• Salt and pepper to taste\n• ½ cup shredded cheese (optional)\n\nInstructions:\ni. Preheat oven to 375°F (190°C).\nii. Cut off tops of bell peppers and remove seeds.\n..."
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- Ghost Image -->
+
+    <!-- Buttons Container -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <!-- Copy Button -->
+        <Button
+            android:id="@+id/copyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Copy"
+            android:backgroundTint="#FFB6E5"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Retry Button -->
+
+        <ImageView
+            android:id="@+id/ghostImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="Ghost holding fork"
+            android:src="@drawable/ghost_fork" />
+
+        <Button
+            android:id="@+id/retryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retry"
+            android:backgroundTint="#FFFACD"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+
+</LinearLayout>

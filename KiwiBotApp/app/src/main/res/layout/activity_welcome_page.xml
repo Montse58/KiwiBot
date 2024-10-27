@@ -23,7 +23,7 @@
             android:id="@+id/ghostImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/asset_1"
+            android:src="@drawable/ghost"
             android:contentDescription="Ghost image" />
     </LinearLayout>
 

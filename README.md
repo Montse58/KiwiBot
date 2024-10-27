@@ -26,7 +26,6 @@ KiwiBot is a smart recipe generator designed to help users meet their daily prot
 
 - **Kotlin:** Powers the Android app's frontend for a smooth user experience.
 - **Flask:** Handles backend functionality and recipe generation.
-- **MongoDB:** Stores user data and ingredient information securely.
 - **ChatGPT AI:** Generates personalized recipes based on user input.
 
 <img src="https://github.com/Montse58/KiwiBot/raw/main/ReadMe-Assets/authors.svg" alt="Authors" height="48px">

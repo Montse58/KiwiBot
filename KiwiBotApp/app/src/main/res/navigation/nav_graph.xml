@@ -3,26 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/WelcomePageFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.kiwibotapp.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/WelcomePageFragment"
+        android:name="com.example.kiwibotapp.WelcomePage"
+        android:label="Welcome Page"
+        tools:layout="@layout/activity_welcome_page">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_WelcomePage_to_MainPage"
+            app:destination="@id/MainPage" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.kiwibotapp.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/MainPage"
+        android:name="com.example.kiwibotapp.MainPage"
+        android:label="Main Page"
+        tools:layout="@layout/activity_main_page">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_MainPage_to_Results"
+            app:destination="@id/Results" />
+    </fragment>
+    <fragment
+        android:id="@+id/Results"
+        android:name="com.example.kiwibotapp.Results"
+        android:label="Results"
+        tools:layout="@layout/activity_results">
+
+        <action
+            android:id="@+id/action_Results_to_MainPage"
+            app:destination="@id/MainPage" />
     </fragment>
 </navigation>

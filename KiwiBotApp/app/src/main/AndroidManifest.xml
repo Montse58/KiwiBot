@@ -18,9 +18,9 @@
         android:theme="@style/Theme.KiwiBotApp"
         tools:targetApi="31">
 
-        <!-- Set WelcomePage as the main entry point -->
+        <!-- MainActivity set as the launcher activity -->
         <activity
-            android:name=".WelcomePage"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,13 +28,6 @@
             </intent-filter>
         </activity>
 
-        <!-- Other activities -->
-        <activity
-            android:name=".Results"
-            android:exported="false" />
-        <activity
-            android:name=".MainPage"
-            android:exported="false" />
 
     </application>
 
